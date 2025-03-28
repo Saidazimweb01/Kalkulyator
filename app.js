@@ -24,13 +24,20 @@ let elList = document.querySelector("ul")
 elBtn.addEventListener("click", function (evt) {
     evt.preventDefault()
 
-    
     let elItem = document.createElement("li")
-    
- 
+
+
 
     let num1 = +elInpOne.value
     let num2 = +elInpTwo.value
+
+    if (isNaN(num1) || isNaN(num2)) {
+        elItem.setAttribute('class', 'red-text')
+        elItem.textContent = "Iltimos harf kiritmang!";
+        elList.appendChild(elItem);
+        return;
+    }
+
 
     switch (+elSelect.value) {
         case 1:

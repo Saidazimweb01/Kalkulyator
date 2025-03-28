@@ -22,6 +22,11 @@ body {
 
 }
 
+
+.red-text{
+    color: red;
+}
+
 .container {
     max-width: 1240px;
     padding: 0 20px;
